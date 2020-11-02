@@ -22,26 +22,9 @@ public class LoginStepDefinitions {
 
     @Then("user enters {string} and password and clicks login button")
     public void user_enters_and_and_clicks_login_button(String username) {
-
-       loginPage.login( "email",  "password");
-
-  //  username  = username.toLowerCase();
-    //  switch (username){
-    //      case "library":
-     //         Driver.getDriver().findElement(By.id("inputEmail")).sendKeys(ConfigurationReader.getProperty("libraryUser"));
-     //         Driver.getDriver().findElement(By.id("inputPassword")).sendKeys(ConfigurationReader.getProperty("libraryPassword"));
-     //         Driver.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-
+       loginPage.login();
 
       }
 
-    @Then("user clicks on user tab section")
-    public void user_clicks_on_user_tab_section() {
 
-     //   WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
-     //   WebElement usersTab = Driver.getDriver().findElement(By.xpath("//a[@href='#users']/span[1]"));
-     //   wait.until(ExpectedConditions.elementToBeClickable(usersTab));
-     //   usersTab.click();
-
-    }
 }

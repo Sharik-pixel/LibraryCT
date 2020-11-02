@@ -1,5 +1,6 @@
 package com.libraryct.pages;
 
+import com.libraryct.utilities.ConfigurationReader;
 import com.libraryct.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,10 +21,10 @@ public class LoginPage {
     @FindBy(tagName = "button")
     public WebElement signIn;
 
-    public void login(String email, String password) {
-        this.email.sendKeys(email);
-        this.password.sendKeys(password);
-        signIn.click();
+    public void login() {
+    email.sendKeys(ConfigurationReader.getProperty("libraryUser"));
+    password.sendKeys(ConfigurationReader.getProperty("libraryPassword"));
+    signIn.click();
     }
 }
 
