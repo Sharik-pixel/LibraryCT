@@ -24,6 +24,8 @@ public class LoginStepDefinitions {
     public void user_enters_and_and_clicks_login_button(String username) {
        loginPage.login();
 
+        System.out.println("SAMPLE TEST GITHUB");
+
       }
 
 
